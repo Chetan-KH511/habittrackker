@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:habittrackker/database/habit_database.dart';
 import 'package:habittrackker/datamodel/habit.dart';
 import 'package:habittrackker/screens/functions/drawer.dart';
+import 'package:habittrackker/screens/functions/habit_tile.dart';
 import 'package:habittrackker/screens/functions/habit_util.dart';
 import 'package:provider/provider.dart';
 
@@ -18,12 +19,8 @@ class _HomepageState extends State<Homepage> {
     //read habits on startup
     Provider.of<HabitDatabase>(context, listen: false).readHabits();
 
-
     super.initState();
   }
-
-
-
 
   //text controller for value input
   final TextEditingController textController = TextEditingController();
@@ -60,11 +57,20 @@ class _HomepageState extends State<Homepage> {
               Navigator.pop(context);
 
               textController.clear();
-            },child: const Text('Cancel'),
+            },
+            child: const Text('Cancel'),
           )
         ],
       ),
     );
+  }
+
+//check habit on&off
+  void checkOnOff(bool? value, Habit habit) {
+    //update habit completion status
+    if (value != null) {
+      context.read<HabitDatabase>().updateHabitCompletion(habit.id, value);
+    }
   }
 
   @override
@@ -83,8 +89,7 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
-
-  Widget _buildHabitlist () {
+  Widget _buildHabitlist() {
     //habit db
     final habitDatabase = context.watch<HabitDatabase>();
 
@@ -98,9 +103,12 @@ class _HomepageState extends State<Homepage> {
         final habit = currentHabits[index];
 
         bool isCompletedToday = isHabitCompletedToday(habit.completedDays);
-        
-        return ListTile(title: Text(habit.name),);
-       
-    },);
+
+        return MyHabittile(
+            iscompleted: isCompletedToday,
+            text: habit.name,
+            onchanged: (value) => checkOnOff(value, habit));
+      },
+    );
   }
 }
