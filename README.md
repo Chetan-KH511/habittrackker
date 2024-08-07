@@ -1,16 +1,12 @@
-# habittrackker
+Habit Tracker with Firebase Authentication
 
-A new Flutter project.
+The App has
+User Authentication : Authentication features using firebase,
+Habit Management : Allows user to create, edit, and delete habits. The data is stored in a local database ,(isar database)
+Habit Tracking : Tracks the completion of habits by keeping track of the first date of any given habit 
+Progress overview: Has a heat map , visually show cases the progress through heatmap which darkens as you complete more & more habits.It keeps track for all the days you have completed the habits.
+Theme : Contains light and dark mode which helps visually 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+https://github.com/user-attachments/assets/dfcf8a78-6511-4127-9c2a-e3e0065d3b58
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
