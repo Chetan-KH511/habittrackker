@@ -31,6 +31,7 @@ class _HomepageState extends State<Homepage> {
       context: context,
       builder: (context) => AlertDialog(
         content: TextField(
+          autofocus: true,
           controller: textController,
           decoration: const InputDecoration(
             hintText: "Enter the new habit",
@@ -75,6 +76,8 @@ class _HomepageState extends State<Homepage> {
       context: context,
       builder: (context) => AlertDialog(
         content: TextField(
+          autofocus: true,
+          autocorrect: true,
           controller: textController,
         ),
         actions: [
