@@ -48,7 +48,7 @@ class MyHabittile extends StatelessWidget {
             decoration: BoxDecoration(
 
               color: iscompleted
-                  ? Color.fromARGB(255, 25, 59, 87)
+                  ? Colors.green
                   : Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(8),
             ),
