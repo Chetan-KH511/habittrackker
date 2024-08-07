@@ -150,7 +150,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -160,7 +160,7 @@ class _HomepageState extends State<Homepage> {
         floatingActionButton: FloatingActionButton(
           onPressed: createNewhabit,
           elevation: 10,
-          backgroundColor: Theme.of(context).colorScheme.tertiary,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           child: const Icon(Icons.add),
         ),
         body: ListView(

@@ -17,13 +17,14 @@ class MyCalendar extends StatelessWidget {
       scrollable: true,
       size: 30,
        showText: true,
-       showColorTip: false,
+
+       showColorTip: true,
       colorsets: {
-        1: Colors.purple.shade300,
-        2: Colors.purple.shade400,
-        3: Colors.purple.shade500,
-        4: Colors.purple.shade600,
-        5: Colors.purple.shade700,
+        1: Colors.green.shade300,
+        2: Colors.green.shade400,
+        3: Colors.green.shade500,
+        4: Colors.green.shade600,
+        5: Colors.green.shade700,
       },
     );
   }

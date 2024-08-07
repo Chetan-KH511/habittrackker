@@ -12,6 +12,8 @@ class Mydrawer extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         child: Center(
           child: CupertinoSwitch(
+            trackColor: Colors.black,
+            thumbColor: Colors.white,
             value: Provider.of<ThemeProvider>(context).isDark,
             onChanged: (value) =>
                 Provider.of<ThemeProvider>(context, listen: false).switchTheme(),

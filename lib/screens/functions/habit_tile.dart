@@ -46,14 +46,15 @@ class MyHabittile extends StatelessWidget {
           },
           child: Container(
             decoration: BoxDecoration(
+
               color: iscompleted
-                  ? Colors.purple
+                  ? Color.fromARGB(255, 25, 59, 87)
                   : Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(8),
             ),
             padding: const EdgeInsets.all(12),
             child: ListTile(
-              title: Text(text),
+              title: Text(text, style: TextStyle(color: iscompleted?Colors.white:Colors.black)),
               leading: Checkbox(
                 activeColor: Colors.purple,
                 onChanged: onchanged,
